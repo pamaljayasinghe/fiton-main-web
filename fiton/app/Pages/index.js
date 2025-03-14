@@ -1,9 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
-// Fix the import path - assuming HowItWorks is in the same directory
 import HowItWorks from "./HowItWorks";
-
+import WhyChooseFitOn from "./Feature"; // Updated import path
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -39,6 +38,7 @@ export default function Home() {
             {/* This div will be styled with the fashion illustration */}
           </div>
         </section>
+        <WhyChooseFitOn />
         <HowItWorks />
       </main>
     </div>

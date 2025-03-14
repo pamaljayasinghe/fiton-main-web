@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import HowItWorks from "./Pages/HowItWorks";
+import WhyChooseFitOn from "./Pages/Feature"; // Updated import path
 
 export default function Home() {
   return (
@@ -37,6 +38,7 @@ export default function Home() {
       </section>
 
       {/* Add the HowItWorks component here */}
+      <WhyChooseFitOn />
       <HowItWorks />
     </div>
   );
