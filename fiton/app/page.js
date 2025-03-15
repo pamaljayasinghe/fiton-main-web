@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import HowItWorks from "./Pages/HowItWorks";
 import WhyChooseFitOn from "./Pages/Feature"; // Updated import path
+import Contact from "./Pages/Contact";
 
 export default function Home() {
   return (
@@ -40,6 +41,7 @@ export default function Home() {
       {/* Add the HowItWorks component here */}
       <WhyChooseFitOn />
       <HowItWorks />
+      <Contact />
     </div>
   );
 }
