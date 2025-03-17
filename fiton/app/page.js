@@ -1,13 +1,15 @@
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import Header from "./Pages/Header";
 import HowItWorks from "./Pages/HowItWorks";
-import WhyChooseFitOn from "./Pages/Feature"; // Updated import path
+import WhyChooseFitOn from "./Pages/Feature";
 import Contact from "./Pages/Contact";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <main className={styles.container}>
+      <Header />
       <section className={styles.bannerSection}>
         <div className={styles.bannerContent}>
           <h1 className={styles.title}>Try Before You Buy</h1>
@@ -26,22 +28,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.bannerImage}>
-          {/* You can optionally use Image component instead of CSS background */}
-          {/* <Image 
-            src="/fashion-illustration.png"
-            alt="Fashion Illustration"
-            fill
-            style={{ objectFit: 'contain' }}
-            priority
-          /> */}
-        </div>
+        <div className={styles.bannerImage}>{/* Banner image */}</div>
       </section>
 
-      {/* Add the HowItWorks component here */}
       <WhyChooseFitOn />
       <HowItWorks />
       <Contact />
-    </div>
+    </main>
   );
 }

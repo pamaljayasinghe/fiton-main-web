@@ -1,8 +1,14 @@
 .container {
   width: 100%;
   min-height: 100vh;
+  position: relative;
   padding: 0;
   margin: 0;
+}
+
+/* Remove top padding from content */
+.content {
+  padding-top: 0;
 }
 
 .bannerSection {
@@ -14,9 +20,10 @@
   background-image: url("/img/homeback.svg"); /* Fixed path */
   background-size: cover;
   background-position: center;
-
   color: white;
   overflow: hidden;
+  /* Add padding to account for the navbar */
+  padding-top: 100px;
 }
 
 .bannerContent {
