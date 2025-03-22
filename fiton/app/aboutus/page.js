@@ -1,9 +1,11 @@
-import React from "react";
-import styles from "./aboutus.module.css";
+"use client";
+import React, { useEffect } from "react";
+import styles from "./page.module.css";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Script from "next/script";
 
 export default function AboutUs() {
   // Animation variants
@@ -11,6 +13,19 @@ export default function AboutUs() {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
+
+  // Load Font Awesome
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href =
+      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css";
+    document.head.appendChild(link);
+
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -41,7 +56,7 @@ export default function AboutUs() {
           </p>
           <div className={styles.imageBubble}>
             <Image
-              src="/img/aboutus-intro.svg"
+              src="/img/clothselect.png"
               alt="Fit-On Innovation"
               width={500}
               height={300}
@@ -130,7 +145,7 @@ export default function AboutUs() {
             </div>
             <div className={styles.visionImage}>
               <Image
-                src="/img/vision.svg"
+                src="/img/vision.jpg"
                 alt="Fit-On Vision"
                 width={400}
                 height={300}
@@ -156,7 +171,14 @@ export default function AboutUs() {
             incorrect sizing and inefficient wardrobe management.
           </p>
           <div className={styles.teamGrid}>
-            {/* You can add team photos here if needed */}
+            {
+              <Image
+                src="/img/about.jpeg"
+                alt="Fit-On Vision"
+                width={800}
+                height={500}
+              />
+            }
           </div>
         </div>
       </motion.section>
@@ -196,12 +218,6 @@ export default function AboutUs() {
       </motion.section>
 
       <Footer />
-
-      {/* Font Awesome for modern icons */}
-      <script
-        src="https://kit.fontawesome.com/a076d05399.js"
-        crossOrigin="anonymous"
-      ></script>
     </div>
   );
 }
