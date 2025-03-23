@@ -54,8 +54,8 @@ export default function Header() {
             <Link href="/contactus" className={styles["nav-link"]}>
               Contact Us
             </Link>
-            <Link href="/login" className={styles["login-button"]}>
-              Login
+            <Link href="#" className={styles["login-button"]}>
+              Download APP
             </Link>
           </div>
 
