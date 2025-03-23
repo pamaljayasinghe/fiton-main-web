@@ -86,7 +86,7 @@ export default function Header() {
         <div className={styles["mobile-logo-container"]}>
           <Link href="/">
             <Image
-              src="/logo-white.png"
+              src="/img/logo.png"
               alt="FitOn Logo"
               width={60}
               height={60}
